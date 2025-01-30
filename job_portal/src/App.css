@@ -1,0 +1,315 @@
+#header{
+    width: 100%;
+    height: 55px;
+    background: #d9d9d9;
+}
+#content{
+    width: 100%;
+    height: calc(100% - 105px);
+    background: #fff;   
+}
+#footer{
+    width: 100%;
+    height: 50px;
+     background: #d9d9d9;
+     box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.486);
+}
+#HomePage{
+    width: 100%;
+    height: 100vh;
+}
+#header .logo{
+    width: 40px;
+    position: relative;
+    top: 7px;
+    float: left;
+    margin:0px 10px ;
+}
+
+#header .logoText {
+   font-size: 25px;
+   position: relative;
+   top :13px;
+   font-weight: bold;
+}
+#header span{
+    color: rgb(4, 133, 193);
+}
+#header .signinText,.logininText{
+    position: relative;
+    float: right;
+    top: -15px;
+    cursor: pointer;
+    margin-right: 20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background: rgb(0, 0, 255);
+    color: #fff;
+}
+#header .signinText:hover{
+    background: rgb(1, 1, 112);
+}
+.logininText:hover{
+    background: rgb(1, 1, 112);
+}
+
+#footer .copyText{
+    position: relative;
+    float: left;
+    margin: 10px 10px 0px;
+    font-size: 12px;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.584);
+}
+#footer .footersocdiv{
+    margin-right: 10px;
+}
+#footer .socicon{
+    position: relative;
+    float: right;
+    margin: 7px 5px;
+    width: 19px;
+    cursor: pointer;
+}
+#content .text1{
+    position: relative;
+    color: hsla(124, 95%, 30%, 0.916);
+    font-weight: bold;
+    padding: 30px 10px 0px ;
+}
+#content .text2 {
+    padding-left: 20px;
+}
+#content .text3{
+    color: rgba(53, 53, 232, 0.854);
+    margin-top: -20px;
+    padding: 15px;
+    font-size: 30px;
+    font-weight: 500;
+}
+#content .searchBar{
+   margin: 20px;
+   width: 60%;
+   padding: 10px;
+   background-color: rgba(255, 255, 255, 0.993);
+   border-radius: 15px;
+   border: 1px solid gray;
+   border-left: 1px solid gray;
+   border-top: 1px solid gray;
+   box-shadow: 1px 1px 1px gray;
+}
+#content .searchBar:hover{
+    scale:1.02;
+    background: #e1e0e078;
+}
+#content .searchBar:hover input{
+    background-color: #ffffff;
+}
+.searchBar input{
+    border: 1px solid;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 10px 10px 10px 35px;
+    margin:10px 20px;
+}
+.searchBar .sjobText{
+    background: url('searchicon.png');
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.searchBar .slocationText{
+    background: url('location.png');
+    background-repeat: no-repeat;
+    background-size: 20px;  
+    background-position: 10px;
+}
+.searchBar .sbtn{
+    background: hsla(124, 89%, 56%, 0.804);
+    border: none;
+    height: 40px;
+    width: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.searchBar .sbtn:hover{
+    background: hsl(124, 95%, 43%);
+}
+
+
+@media only screen and (max-width:450px) {
+    .searchBar input{
+         width: 80%;
+         font-size: 10px;
+      }
+    .searchBar .sbtn{
+        width: 100px;
+    }
+    
+} 
+
+#pop-up,#pop-up1{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#pop-up1 #popup-window{
+    padding: 40px;
+}
+#pop-up1 #popup-window .close{
+    position: absolute;
+    top: 65px;
+}
+.close{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    margin:-60px 10px -30px 0px;
+}
+#popup-window{
+    color: #ffff;
+    border-radius: 10px;
+    border:2px solid rgba(244, 240, 240, 0.993);
+    padding: 40px;
+    background:#686666e8 ;
+    backdrop-filter: blur(0px);
+ }
+ #popup-window .login-head{
+     text-align: center;
+     font-size:20px;
+ }
+ #popup-window .login-info{
+     width: 100%;
+     height: 50px;
+     margin: 30px 0;
+     position: relative;
+ }
+ .login-info input{
+     height: 10px;
+     background: transparent;
+     outline: none;
+     border: 2px solid rgba(255, 255, 255, 0.2);
+     border-radius: 10px;
+     font-size: 16px;
+     color: #ffff;
+     padding: 20px 105px 20px 20px ;
+     transition: 0.5s;
+ }
+ .login-info label{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .3s;
+    padding: 0 7px;
+    font-size: 13pt;
+ }
+ .login-info input:focus,
+ .login-info input:valid{
+    border: 2px solid rgba(9, 248, 9, 0.685);
+ }
+ .login-info input:focus~label,
+ .login-info input:valid~label{
+    color: #0bf60f;
+    background: #686666e8 ;
+    top: 0;
+    left: 10px;
+    font-size: 13px;
+ }
+
+ .login-info i{
+     position: absolute;
+     right: 20px;
+     top: 35%;
+     font-size: 25px;
+ }
+ #popup-window .forget-remember{
+     display: flex;
+     justify-content: space-between;
+     font-size: 14px;
+     margin: -1px 20px 15px;
+ }
+ .forget-remember input{
+    cursor: pointer;
+ }
+ .forget-remember a{
+     color: #ffff;
+     text-decoration: none; 
+ }
+ .forget-remember a:hover{
+     text-decoration: underline;
+ }
+ .login-button button{
+     width: 100%;
+     height: 45px;
+     background: #ffff;
+     color: #333;
+     outline: none;
+     border: none;
+     border-radius: 40px;
+     box-shadow: 0 0 10px  rgba(255, 255, 255, 0.2);
+     font-size: 16px;
+     font-weight: 600;
+     cursor: pointer;
+ }
+
+ .login-button button:hover{
+    background: #c7c5c5eb;
+    color: #fff;
+ }
+ .register{
+      text-align: center;
+      font-size: 13px;
+      margin-top: 20px;
+ }
+ .register a{
+     text-decoration: none;
+      color: #ffff;
+      font-weight: 600;
+      cursor: pointer;
+ }
+ .register a:hover{
+     text-decoration: underline;
+ }
+ .remove-popup-window{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 0;
+ }
+.select-role{
+    font-size: 0.8rem;
+    margin: -15px 10px;
+}
+.select-role #role{
+    outline: none;
+    margin-left: 5px;
+    border-radius: 5px;
+    padding: 2px;
+    background: transparent;
+    border: 2px solid rgb(165, 165, 165);
+    color: #fff;
+    cursor: pointer;
+
+}
+.select-role #role option {
+    background: #444; 
+    color: #fff; 
+}
+
+.select-role #role:focus,
+.select-role input:valid{
+    border: 2px solid rgba(9, 248, 9, 0.685);
+    outline: none;
+ }
